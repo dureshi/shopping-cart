@@ -1,0 +1,96 @@
+.shop {
+  display: flex;
+  gap: 24px;
+  padding: 32px;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  height: calc(100vh - 50px);
+  overflow-y: auto;
+}
+
+.itemCard {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  height: 300px;
+  background: #e0e0e0;
+  border-radius: 8px 8px 0 0;
+  object-fit: contain;
+}
+
+.cardBody {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  height: 48px;
+}
+
+.itemName {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.itemPrice {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.decrement,
+.increment {
+  width: 28px;
+  height: 28px;
+  background: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.qtyInput {
+  width: 40px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 4px;
+  font-size: 0.9rem;
+}
+
+.addItem {
+  padding: 8px;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-top: auto;
+}
+
+.addItem:hover {
+  background: #111;
+}
+
+.loading {
+    font-size: 50px;
+    font-weight: bold;
+    justify-self: center;
+    margin-top: 25%;
+}
