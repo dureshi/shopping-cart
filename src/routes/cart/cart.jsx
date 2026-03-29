@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import styles from './cart.module.css'
 import { useOutletContext } from 'react-router-dom'
 
@@ -20,8 +20,11 @@ export default function Cart() {
             item.id !== id));
     }
 
-    const total = itemsInCart.reduce((sum, item) => 
-        sum + item.quantity * item.price, 0);
+    const totalPrice = useMemo(() => {
+        return itemsInCart.reduce((sum, item) => 
+        sum + item.quantity * item.price, 0
+        );
+    }, [itemsInCart]);
 
     return (
         <div className={styles.cart}>
@@ -47,7 +50,7 @@ export default function Cart() {
                     <button className={styles.removeBtn} onClick={() => handleRemoveItem(item.id)}>Delete</button>
                 </div>
         ))}
-        <p className={styles.total}>Total: ${total}</p>
+        <p className={styles.total}>Total: ${totalPrice}</p>
         </div>
     )
 }

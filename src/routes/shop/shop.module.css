@@ -32,7 +32,7 @@
   flex-direction: column;
   gap: 8px;
   flex: 1;
-  height: 48px;
+  justify-content: space-between;
 }
 
 .itemName {
@@ -81,7 +81,6 @@
   border-radius: 4px;
   font-size: 0.9rem;
   cursor: pointer;
-  margin-top: auto;
 }
 
 .addItem:hover {
@@ -93,4 +92,11 @@
     font-weight: bold;
     justify-self: center;
     margin-top: 25%;
+}
+
+.productDetail {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: auto;
 }

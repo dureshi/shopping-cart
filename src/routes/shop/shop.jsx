@@ -40,6 +40,7 @@ export default function Shop() {
             <img className={styles.imagePlaceholder} src={item.image} alt={item.title}/>
             <div className={styles.cardBody}>
               <p className={styles.itemName}>{item.title}</p>
+            <div className={styles.productDetail}>
               <p className={styles.itemPrice}>${item.price}</p>
               <div className={styles.quantity}>
                 <button className={styles.decrement} onClick={() => decreaseQuantity(item.id)}>-</button>
@@ -53,6 +54,7 @@ export default function Shop() {
                 <button className={styles.increment} onClick={() => increaseQuantity(item.id)}>+</button>
               </div>
               <button className={styles.addItem} onClick={() => handleAddToCart(item)}>Add to Cart</button>
+              </div>
             </div>
           </div>
         ))}
